@@ -53,7 +53,7 @@ RSpec.describe HashClass, type: Class do
       hash = HashClass.new(1)
       hash["key"] = "value"
       expect(hash.size).to eq 1
-      hash["key"] = "different"
+      hash["keyy"] = "different"
       expect(hash.size).to eq 2
     end
 

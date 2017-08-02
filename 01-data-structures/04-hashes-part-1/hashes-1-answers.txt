@@ -1,0 +1,12 @@
+On a small scale doubling the size of an array
+to handle a collision is quick and simple however
+if the list of items were to scale up it could
+become quite expensive.  Not only is more memory
+required to hold a larger array but it could be
+waisted space. For example if you have an array
+length of 256 containing 100 hashed items and
+a collision occured when adding a new item
+the array would then be doubled to 512 leaving
+us with an array length of 512 and only 101
+hashed items.  The array would then be 5 times 
+larger than necessary.
