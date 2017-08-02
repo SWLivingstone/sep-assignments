@@ -1,0 +1,22 @@
+1. I used an series of nested arrays to create
+a grid
+[
+[[],[],[],[],[],[],]
+[[],[],[],[],[],[],]
+[[],[],[],[],[],[],]
+[[],[],[],[],[],[],]
+]
+
+In this way each pixel can be accessed with in
+the array using array[x][y] to find a given
+pixel at a given x and y.  Arrays are very
+easy to work with in terms of manipulating data
+so a devloper can easily update pixels at will.
+
+2.  A developer can find a given pixel by
+using its x and y axis values
+
+3. This could work for:
+  - Chess board (most board games really)
+  - mapping with a grid
+  - creating an graphed matrix

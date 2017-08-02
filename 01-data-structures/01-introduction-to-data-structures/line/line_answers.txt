@@ -1,0 +1,12 @@
+1. My data structure allows for the simple
+manipulation of a line.  A developer is able
+to add and remove from the line as well as
+to search the line by name and position (first,
+last, middle).
+
+2. A specific item can be searched for by name.
+
+3. This data structure could represent any que
+or order.  It could also represent a leader
+board so long as no ties are permited.  It could
+represent the order in which to do something.
