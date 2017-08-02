@@ -1,0 +1,14 @@
+1. Spatial Locality is the "location" of items
+relative to eachother.  For example in an array
+items are located next to eachother and have a
+given index relative to the entire array.  In
+a linked list items can be located anywhere and
+are only conected to eachother via the previous
+item in the list.
+
+
+2. I ran Benchmark in speed_test.rb
+
+The array was much faster in each operation.
+However, the amount of active memory used for
+list would be far less.
