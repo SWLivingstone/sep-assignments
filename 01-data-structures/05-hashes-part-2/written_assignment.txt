@@ -1,0 +1,49 @@
+3 reolution stratagies not mentioned in the
+checkpoint:
+
+1. Quadradic Probing:
+  Simaler to linar probing except instead of
+  simply going to the next available index
+  when a collision occurs the key is moved to
+  a new location based on a quadradic sequence.
+
+  For example.  If a collision occurs at given
+  index K then the 2nd item will be placed at
+  index K + 1.  If another collision occurs at
+  the same given index of K then the 3rd item
+  will be placed at index K + 4 and the next
+  item at K + 9 and then K + 16.  The adjusted
+  index follows a quadradic sequence - in this
+  case a sequence of 2 because computers like
+  the number 2 :)
+
+2. Double Hashing:
+  When a collision occurs a 2nd hash function is
+  applied to the key.  The result of the 2nd hash
+  function will then be added to the original index
+  for insertion.
+
+  Example: If a collision occurs at given index
+  K then another hashing function is run the result
+  of which is L. The key is then inserted at index
+  K + L.
+
+3. Rehashing:
+  While not the most effecient method of dealing
+  with collisions it does work.  Basically when
+  a collision occurs the hash is resized to be
+  twice is large and all of the items are rehashed
+  into new indices.
+
+
+My own idea for collision resolution:
+
+I call it "Area Probing"
+
+When a collision occurs the colliding key
+is placed in the nearest index.
+
+Example:  When a collision occurs at given index
+K index K+1 is checked then K-1 then K+2 then K-2
+and so on until an available index has been found
+for insertion.

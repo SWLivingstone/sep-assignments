@@ -66,4 +66,15 @@ class OpenAddressing
     end
     @items = new_item_hash
   end
+
+  def print_hash
+    total_items = 0.0
+    self.size.times do |i|
+      if @items[i]
+        p "Key: #{@items[i].key} with Value: #{@items[i].value} is stored at index #{i}"
+        total_items += 1
+      end
+    end
+    p "There are #{total_items} items in this HashClass with #{self.size} indices and a load factor of #{total_items / self.size}"
+  end
 end
