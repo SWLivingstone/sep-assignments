@@ -8,8 +8,8 @@ class Node
   def initialize(title, rating)
     @title = title
     @rating = rating
-    @left = false
-    @right = false
-    @parent = false
+    @left = nil
+    @right = nil
+    @parent = nil
   end
 end
