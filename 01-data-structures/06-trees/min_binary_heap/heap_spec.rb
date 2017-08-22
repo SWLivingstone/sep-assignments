@@ -23,19 +23,19 @@ RSpec.describe MinBinaryHeap, type: Class do
     #   tree.insert(tree.root, pacific_rim)
     #   expect(tree.root.left.title).to eq "The Matrix"
     # end
-
-    it "properly inserts a new node as a left-left child" do
-      tree.insert(tree.root, martian)
-      tree.insert(tree.root, district)
-      tree.insert(tree.root, braveheart)
-      expect(tree.root.left.left.title).to eq "The Martian"
-    end
-
+    #
+    # it "properly inserts a new node as a left-left child" do
+    #   tree.insert(tree.root, martian)
+    #   tree.insert(tree.root, district)
+    #   tree.insert(tree.root, braveheart)
+    #   expect(tree.root.left.left.title).to eq "The Martian"
+    # end
+    #
     # it "properly inserts a new node as a left-right child" do
     #   tree.insert(tree.root, martian)
     #   tree.insert(tree.root, district)
     #   tree.insert(tree.root, braveheart)
-    #   tree.insert(tree.root, inseption)
+    #   tree.insert(tree.root, inception)
     #   expect(tree.root.left.right.title).to eq "The Matrix"
     # end
     #
@@ -44,21 +44,21 @@ RSpec.describe MinBinaryHeap, type: Class do
     #   tree.insert(tree.root, district)
     #   expect(tree.root.right.title).to eq "District 9"
     # end
-    #
-    # it "properly inserts a new node as a right-left child" do
-    #   tree.insert(tree.root, martian)
-    #   tree.insert(tree.root, district)
-    #   tree.insert(tree.root, braveheart)
-    #   tree.insert(tree.root, inseption)
-    #   tree.insert(tree.root, donnie)
-    #   expect(tree.root.right.left.title).to eq "District 9"
-    # end
+
+    it "properly inserts a new node as a right-left child" do
+      tree.insert(tree.root, martian)
+      tree.insert(tree.root, district)
+      tree.insert(tree.root, braveheart)
+      tree.insert(tree.root, inception)
+      tree.insert(tree.root, donnie)
+      expect(tree.root.right.left.title).to eq "District 9"
+    end
     #
     # it "properly inserts a new node as a right-right child" do
     #   tree.insert(tree.root, martian)
     #   tree.insert(tree.root, district)
     #   tree.insert(tree.root, braveheart)
-    #   tree.insert(tree.root, inseption)
+    #   tree.insert(tree.root, inception)
     #   tree.insert(tree.root, donnie)
     #   tree.insert(tree.root, mad_max_2)
     #   expect(tree.root.right.right.title).to eq "Mad Max 2: The Road Warrior"
