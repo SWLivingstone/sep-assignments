@@ -1,0 +1,45 @@
+Question 1:
+
+Min Binary Heap Print:
+Pacific Rim: 72\nStar Wars: Return of the Jedi: 80\nBraveheart: 78\n
+The Matrix: 87\nThe Shawshank Redemption: 91\nDistrict 9: 90\n
+Inception: 86\nMad Max 2: The Road Warrior: 98\nThe Martian: 92\n
+Star Wars: The Empire Strikes Back: 94\nStar Wars: A New Hope: 93\n
+
+                              72
+                      78              80
+                  87      90      94      96
+                93  94  92  98
+
+Binary Tree Print
+
+The Matrix: 87\nBraveheart: 78\nMad Max 2: The Road Warrior: 98\n
+Pacific Rim: 72\nInception: 86\nDistrict 9: 90\n
+Star Wars: Return of the Jedi: 80\nThe Shawshank Redemption: 91\n
+The Martian: 92\nStar Wars: The Empire Strikes Back: 94\nStar Wars: A New Hope: 93
+
+                              87
+                      78              98
+                  72      86      90
+                        80          91
+                                      92
+                                        94
+                                      93
+
+
+Question 2:
+Speed Test
+
+The average insertion is significantly faster in a Binary Heap when
+compared to a Binary SearchTree.
+
+Find is roughly the same for both.  Though, I am not using a binary search
+function as we are searching by title name instead of the rating value.
+
+Delete is slightly slower for Heap which makes sense as Heap must shuffle more
+nodes to delete where as Binary Search Tree must only suffle 3.
+
+A Binary Heap can be used for creating a priority queue.
+
+A Binary Search Tree is used to store items for fast look up because the keys
+are kept in a sorted order allowing for a binary search.

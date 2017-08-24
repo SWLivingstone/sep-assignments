@@ -39,21 +39,25 @@ class BinarySearchTree
     end
     current_node = root
     while current_node.title != data
-      unless current_node.left || current_node.right
-        return nil
-      end
       if current_node.left
         current_node = current_node.left
       elsif current_node.right
         current_node = current_node.right
-      elsif current_node != current_node.parent.right
+      elsif !current_node.parent
+        return nil
+      elsif current_node != current_node&.parent&.right
         current_node = current_node.parent.right
-      else
+      elsif current_node.parent.parent
         if current_node.parent == current_node.parent.parent.right
           return nil
         else
           current_node = current_node.parent.parent.right
         end
+      else
+        return nil
+      end
+      if current_node == false
+        return nil
       end
     end
     current_node
