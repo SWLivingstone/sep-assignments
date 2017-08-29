@@ -78,12 +78,12 @@ class MinBinaryHeap
     target_node.title = @bottom_node.title
     target_node.rating = @bottom_node.rating
     if @bottom_node.parent
+      delete_bottom_node()
       new_bottom_node = find_new_bottom()
     else
       @root = nil
       return "The only node in the heap has been deleted"
     end
-    delete_bottom_node()
     @bottom_node = new_bottom_node
     bubble_down(target_node)
   end
@@ -133,7 +133,9 @@ class MinBinaryHeap
   def bubble_down(node)
     while node&.left || node&.right
       if node.left && node.right
-        if node.left.rating < node.right.rating
+        if node.rating < (node.right.rating && node.left.rating)
+          return          
+        elsif node.left.rating < node.right.rating
           node_swap(node, node.left)
           node = node.left
         else
@@ -148,15 +150,15 @@ class MinBinaryHeap
   end
 
   def find_new_bottom()
-    if @bottom_node.parent.left != @bottom_node
-      new_bottom_node = @bottom_node.parent.left
-    else
-      current_node = @root
-      while current_node.right
-        current_node = current_node.right
-      end
-      new_bottom_node = current_node
+    queue = MyQueue.new()
+    queue.enqueue(@root)
+    while queue.empty? != true
+      new_bottom_node = queue.head
+      queue.enqueue(queue.head&.left) if queue.head.left
+      queue.enqueue(queue.head&.right)  if queue.head.right
+      queue.dequeue
     end
+    new_bottom_node
   end
 
   def delete_bottom_node()
